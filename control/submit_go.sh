@@ -8,7 +8,7 @@
 #SBATCH -c 32
 #SBATCH --gpus-per-task=1
 #SBATCH -o go.%j
-#SBATCH --job-name=go_jobnanme
+#SBATCH --job-name=go_jobname
 
 source /opt/cray/pe/cpe/26.03/restore_lmod_system_defaults.sh
 module use /global/cfs/cdirs/m4025/Software/Perlmutter/modules
