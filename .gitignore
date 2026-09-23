@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Editors / OS
+.vscode/
+.DS_Store
+*~
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Large/generated calculation artifacts should never live in this repo
+CONTCAR
+WAVECAR
+CHGCAR
+opt.traj
+opt.log
+job.*
+go.[0-9]*
+slurm-*.out
