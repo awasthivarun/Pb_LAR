@@ -1,0 +1,58 @@
+{
+  "wave": 7,
+  "name": "explicit-water proton-well rescue pilot",
+  "manifest_role": "campaign_definition",
+  "scientific_question": "Can a chemically bound strongly lifted Pb(H)2 state survive at cathodic target-mu when two explicit first-shell water molecules prevent the implicit-solvent cavity from approaching bare H directly?",
+  "strategy": "Compare hydride-oriented and proton-oriented water motifs at a known-good control potential (-0.11930 Ha) and a potential where dry CANDLE calculations exhibit the proton-well artifact (-0.09725 Ha).",
+  "construction": {
+    "explicit_water_count": 2,
+    "OH_bond_A": 0.97,
+    "HOH_angle_deg": 104.5,
+    "hydride_Hwater_contact_A": 1.75,
+    "proton_Owater_contact_A": 1.9
+  },
+  "potential_mapping_note": "Approximate RHE potentials use the historical project calibration. target_mu_Ha is the authoritative calculation variable.",
+  "interpretation_note": "Initial-state labels do not establish the final relaxed chemistry. Final structures must be independently classified for intact water, Pb-H bonding, proton-well formation, and H2 formation.",
+  "jobs": [
+    {
+      "job_id": "X21",
+      "type": "geometry_optimization",
+      "directory": "surfaces/Pb111/proton_well_rescue/hydride_oriented/m0p1193",
+      "orientation": "hydride_oriented",
+      "target_mu_Ha": -0.1193,
+      "approx_U_RHE_V_at_pH7": -1.0,
+      "source_job_id": "M2H07",
+      "initial_state": "strongly_lifted_PbH2_plus_2H2O"
+    },
+    {
+      "job_id": "X22",
+      "type": "geometry_optimization",
+      "directory": "surfaces/Pb111/proton_well_rescue/hydride_oriented/m0p09725",
+      "orientation": "hydride_oriented",
+      "target_mu_Ha": -0.09725,
+      "approx_U_RHE_V_at_pH7": -1.6,
+      "source_job_id": "M2H07",
+      "initial_state": "strongly_lifted_PbH2_plus_2H2O"
+    },
+    {
+      "job_id": "X23",
+      "type": "geometry_optimization",
+      "directory": "surfaces/Pb111/proton_well_rescue/proton_oriented/m0p1193",
+      "orientation": "proton_oriented",
+      "target_mu_Ha": -0.1193,
+      "approx_U_RHE_V_at_pH7": -1.0,
+      "source_job_id": "M2H07",
+      "initial_state": "strongly_lifted_PbH2_plus_2H2O"
+    },
+    {
+      "job_id": "X24",
+      "type": "geometry_optimization",
+      "directory": "surfaces/Pb111/proton_well_rescue/proton_oriented/m0p09725",
+      "orientation": "proton_oriented",
+      "target_mu_Ha": -0.09725,
+      "approx_U_RHE_V_at_pH7": -1.6,
+      "source_job_id": "M2H07",
+      "initial_state": "strongly_lifted_PbH2_plus_2H2O"
+    }
+  ]
+}

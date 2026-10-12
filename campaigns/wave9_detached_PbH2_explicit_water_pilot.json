@@ -1,0 +1,48 @@
+{
+  "wave": 9,
+  "name": "detached PbH2 explicit-water pilot",
+  "manifest_role": "campaign_definition",
+  "scientific_question": "Can detached PbH2 + vacancy be stabilized with the same hydride-oriented two-water first-shell motif as the hydrated surface Pb(H)2 precursor, enabling balanced fixed-mu detachment thermodynamics?",
+  "balanced_comparisons": [
+    {
+      "target_mu_Ha": -0.1193,
+      "surface_job_id": "X21",
+      "detached_job_id": "X28",
+      "quantity": "G_X28 - G_X21"
+    },
+    {
+      "target_mu_Ha": -0.09725,
+      "surface_job_id": "X22",
+      "detached_job_id": "X29",
+      "quantity": "G_X29 - G_X22"
+    }
+  ],
+  "potential_mapping_note": "Approximate RHE potentials use the historical project calibration. target_mu_Ha is the authoritative calculation variable.",
+  "interpretation_note": "Balanced G differences are physically meaningful only after both surface and detached hydrated states have converged to chemically physical structures.",
+  "jobs": [
+    {
+      "job_id": "X28",
+      "type": "geometry_optimization",
+      "family": "PbH2_extraction_explicit_water",
+      "directory": "surfaces/Pb111/PbH2_extraction/explicit_water/detached/m0p1193",
+      "source_job_id": "X06",
+      "source_path": "surfaces/Pb111/PbH2_extraction/fixed_mu/m0p1193/Pb_lift_6p0",
+      "target_mu_Ha": -0.1193,
+      "approx_U_RHE_V_at_pH7": -1.0,
+      "initial_state": "detached_PbH2_plus_vacancy_plus_2H2O",
+      "balanced_surface_partner": "X21"
+    },
+    {
+      "job_id": "X29",
+      "type": "geometry_optimization",
+      "family": "PbH2_extraction_explicit_water",
+      "directory": "surfaces/Pb111/PbH2_extraction/explicit_water/detached/m0p09725",
+      "source_job_id": "X14",
+      "source_path": "surfaces/Pb111/PbH2_extraction/potential_sweep/detached/m0p09725",
+      "target_mu_Ha": -0.09725,
+      "approx_U_RHE_V_at_pH7": -1.6,
+      "initial_state": "detached_PbH2_plus_vacancy_plus_2H2O",
+      "balanced_surface_partner": "X22"
+    }
+  ]
+}

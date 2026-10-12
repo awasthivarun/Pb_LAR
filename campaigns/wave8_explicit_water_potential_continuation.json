@@ -1,0 +1,51 @@
+{
+  "wave": 8,
+  "name": "hydride-oriented explicit-water potential continuation",
+  "manifest_role": "campaign_definition",
+  "scientific_question": "Does the hydrated strongly lifted Pb(H)2 local minimum persist through the cathodic target-mu range where corresponding dry CANDLE calculations enter the proton-well artifact?",
+  "reference_states": {
+    "X21": {
+      "target_mu_Ha": -0.1193,
+      "role": "physical hydride-oriented explicit-water control"
+    },
+    "X22": {
+      "target_mu_Ha": -0.09725,
+      "role": "physical hydride-oriented explicit-water rescue in the dry proton-well regime"
+    }
+  },
+  "continuation_strategy": "Use the nearest available converged physical hydride-oriented explicit-water state as the starting geometry.",
+  "potential_mapping_note": "Approximate RHE potentials use the historical project calibration. target_mu_Ha is the authoritative calculation variable.",
+  "interpretation_note": "Source states must be converged and physically validated before continuation. Final X25-X27 structures must be classified independently.",
+  "jobs": [
+    {
+      "job_id": "X25",
+      "type": "geometry_optimization",
+      "directory": "surfaces/Pb111/proton_well_rescue/hydride_oriented/m0p11195",
+      "source_job_id": "X21",
+      "source_path": "surfaces/Pb111/proton_well_rescue/hydride_oriented/m0p1193",
+      "target_mu_Ha": -0.11195,
+      "approx_U_RHE_V_at_pH7": -1.2,
+      "initial_state": "hydride_oriented_PbH2_plus_2H2O"
+    },
+    {
+      "job_id": "X26",
+      "type": "geometry_optimization",
+      "directory": "surfaces/Pb111/proton_well_rescue/hydride_oriented/m0p1046",
+      "source_job_id": "X22",
+      "source_path": "surfaces/Pb111/proton_well_rescue/hydride_oriented/m0p09725",
+      "target_mu_Ha": -0.1046,
+      "approx_U_RHE_V_at_pH7": -1.4,
+      "initial_state": "hydride_oriented_PbH2_plus_2H2O"
+    },
+    {
+      "job_id": "X27",
+      "type": "geometry_optimization",
+      "directory": "surfaces/Pb111/proton_well_rescue/hydride_oriented/m0p0899",
+      "source_job_id": "X22",
+      "source_path": "surfaces/Pb111/proton_well_rescue/hydride_oriented/m0p09725",
+      "target_mu_Ha": -0.0899,
+      "approx_U_RHE_V_at_pH7": -1.8,
+      "initial_state": "hydride_oriented_PbH2_plus_2H2O"
+    }
+  ]
+}

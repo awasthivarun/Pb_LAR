@@ -1,0 +1,50 @@
+{
+  "wave": 13,
+  "name": "hydrated terrace PbH2 extraction NEB controls",
+  "scientific_question": "How does the kinetic barrier for hydrated PbH2 detachment from ideal Pb(111) compare with detachment from low-coordinate Pb adatoms under matched fixed-mu conditions?",
+  "matched_comparisons": {
+    "m0p1193": {
+      "terrace": "N14",
+      "adatom": "N12",
+      "adatom_site": "hcp"
+    },
+    "m0p0899": {
+      "terrace": "N15",
+      "adatom": "N13",
+      "adatom_site": "fcc"
+    }
+  },
+  "neb_settings": {
+    "n_intermediate_images": 8,
+    "n_total_images": 10,
+    "climb": false,
+    "method": "improvedtangent",
+    "fire_maxstep_A": 0.05,
+    "fmax_eV_A": 0.08,
+    "max_steps": 150
+  },
+  "jobs": [
+    {
+      "job_id": "N14",
+      "type": "NEB",
+      "directory": "kinetics/Pb111/fixed_mu/m0p1193/terrace_PbH2_to_detached_explicit_water",
+      "initial_source_job_id": "X21",
+      "final_source_job_id": "X28",
+      "target_mu_Ha": -0.1193,
+      "approx_U_RHE_V_at_pH7": -1.0,
+      "endpoint_energy_key": "G",
+      "stage": "first_stage_nonclimbing"
+    },
+    {
+      "job_id": "N15",
+      "type": "NEB",
+      "directory": "kinetics/Pb111/fixed_mu/m0p0899/terrace_PbH2_to_detached_explicit_water",
+      "initial_source_job_id": "X27",
+      "final_source_job_id": "X32",
+      "target_mu_Ha": -0.0899,
+      "approx_U_RHE_V_at_pH7": -1.8,
+      "endpoint_energy_key": "G",
+      "stage": "first_stage_nonclimbing"
+    }
+  ]
+}

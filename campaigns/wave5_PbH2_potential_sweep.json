@@ -1,0 +1,113 @@
+{
+  "wave": 5,
+  "name": "PbH2 potential sweep and separation convergence",
+  "manifest_role": "campaign_definition",
+  "scientific_question": "Test how cathodic target-mu affects the stability of the strongly lifted surface Pb(H)2 precursor and detached PbH2 + vacancy states. Where both relaxed states remain physical, compare their grand free energies at the same target-mu.",
+  "reference_states": [
+    {
+      "job_id": "M2H07",
+      "state": "strongly_lifted_surface_PbH2",
+      "target_mu_Ha": -0.1193
+    },
+    {
+      "job_id": "X06",
+      "state": "detached_PbH2_plus_vacancy",
+      "target_mu_Ha": -0.1193
+    }
+  ],
+  "primary_variable": "target_mu_Ha",
+  "potential_mapping_note": "approx_U_RHE_V_at_pH7 uses the historical project calibration and is not the authoritative calculation variable.",
+  "interpretation_note": "Final relaxed structures must be classified before energetic comparison. Proton-well or otherwise unphysical states must not be included in the physical thermodynamic envelope.",
+  "jobs": [
+    {
+      "job_id": "X08",
+      "directory": "surfaces/Pb111/PbH2_extraction/potential_sweep/precursor/m0p11195",
+      "initial_state": "strongly_lifted_surface_PbH2",
+      "target_mu_Ha": -0.11195,
+      "approx_U_RHE_V_at_pH7": -1.2,
+      "source_job_id": "M2H07",
+      "source_path": "surfaces/Pb111/fixed_mu/H2_candidates/PbH2_like/m0p1193/CONTCAR",
+      "purpose": "Potential-dependent relaxation of the strongly lifted surface Pb(H)2 precursor."
+    },
+    {
+      "job_id": "X09",
+      "directory": "surfaces/Pb111/PbH2_extraction/potential_sweep/precursor/m0p1046",
+      "initial_state": "strongly_lifted_surface_PbH2",
+      "target_mu_Ha": -0.1046,
+      "approx_U_RHE_V_at_pH7": -1.4,
+      "source_job_id": "M2H07",
+      "source_path": "surfaces/Pb111/fixed_mu/H2_candidates/PbH2_like/m0p1193/CONTCAR",
+      "purpose": "Potential-dependent relaxation of the strongly lifted surface Pb(H)2 precursor."
+    },
+    {
+      "job_id": "X10",
+      "directory": "surfaces/Pb111/PbH2_extraction/potential_sweep/precursor/m0p09725",
+      "initial_state": "strongly_lifted_surface_PbH2",
+      "target_mu_Ha": -0.09725,
+      "approx_U_RHE_V_at_pH7": -1.6,
+      "source_job_id": "M2H07",
+      "source_path": "surfaces/Pb111/fixed_mu/H2_candidates/PbH2_like/m0p1193/CONTCAR",
+      "purpose": "Potential-dependent relaxation of the strongly lifted surface Pb(H)2 precursor."
+    },
+    {
+      "job_id": "X11",
+      "directory": "surfaces/Pb111/PbH2_extraction/potential_sweep/precursor/m0p0899",
+      "initial_state": "strongly_lifted_surface_PbH2",
+      "target_mu_Ha": -0.0899,
+      "approx_U_RHE_V_at_pH7": -1.8,
+      "source_job_id": "M2H07",
+      "source_path": "surfaces/Pb111/fixed_mu/H2_candidates/PbH2_like/m0p1193/CONTCAR",
+      "purpose": "Potential-dependent relaxation of the strongly lifted surface Pb(H)2 precursor."
+    },
+    {
+      "job_id": "X12",
+      "directory": "surfaces/Pb111/PbH2_extraction/potential_sweep/detached/m0p11195",
+      "initial_state": "detached_PbH2_plus_vacancy",
+      "target_mu_Ha": -0.11195,
+      "approx_U_RHE_V_at_pH7": -1.2,
+      "source_job_id": "X06",
+      "source_path": "surfaces/Pb111/PbH2_extraction/fixed_mu/m0p1193/Pb_lift_6p0/CONTCAR",
+      "purpose": "Potential-dependent relaxation of detached PbH2 above a Pb(111) vacancy."
+    },
+    {
+      "job_id": "X13",
+      "directory": "surfaces/Pb111/PbH2_extraction/potential_sweep/detached/m0p1046",
+      "initial_state": "detached_PbH2_plus_vacancy",
+      "target_mu_Ha": -0.1046,
+      "approx_U_RHE_V_at_pH7": -1.4,
+      "source_job_id": "X06",
+      "source_path": "surfaces/Pb111/PbH2_extraction/fixed_mu/m0p1193/Pb_lift_6p0/CONTCAR",
+      "purpose": "Potential-dependent relaxation of detached PbH2 above a Pb(111) vacancy."
+    },
+    {
+      "job_id": "X14",
+      "directory": "surfaces/Pb111/PbH2_extraction/potential_sweep/detached/m0p09725",
+      "initial_state": "detached_PbH2_plus_vacancy",
+      "target_mu_Ha": -0.09725,
+      "approx_U_RHE_V_at_pH7": -1.6,
+      "source_job_id": "X06",
+      "source_path": "surfaces/Pb111/PbH2_extraction/fixed_mu/m0p1193/Pb_lift_6p0/CONTCAR",
+      "purpose": "Potential-dependent relaxation of detached PbH2 above a Pb(111) vacancy."
+    },
+    {
+      "job_id": "X15",
+      "directory": "surfaces/Pb111/PbH2_extraction/potential_sweep/detached/m0p0899",
+      "initial_state": "detached_PbH2_plus_vacancy",
+      "target_mu_Ha": -0.0899,
+      "approx_U_RHE_V_at_pH7": -1.8,
+      "source_job_id": "X06",
+      "source_path": "surfaces/Pb111/PbH2_extraction/fixed_mu/m0p1193/Pb_lift_6p0/CONTCAR",
+      "purpose": "Potential-dependent relaxation of detached PbH2 above a Pb(111) vacancy."
+    },
+    {
+      "job_id": "X16",
+      "directory": "surfaces/Pb111/PbH2_extraction/separation/fixed_mu/m0p1193/plus_1p5",
+      "initial_state": "detached_PbH2_farther_from_surface",
+      "target_mu_Ha": -0.1193,
+      "approx_U_RHE_V_at_pH7": -1.0,
+      "source_job_id": "X06",
+      "source_path": "surfaces/Pb111/PbH2_extraction/fixed_mu/m0p1193/Pb_lift_6p0/CONTCAR",
+      "purpose": "Separation-convergence check for detached PbH2 at target-mu = -0.1193 Ha; the intact PbH2 unit from X06 is translated 1.5 \u00c5 farther from the Pb(111) surface."
+    }
+  ]
+}

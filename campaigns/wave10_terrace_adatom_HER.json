@@ -1,0 +1,260 @@
+{
+  "wave": 10,
+  "name": "terrace detachment completion + adatom PbH2 screening + Tafel H2 endpoints",
+  "scientific_questions": [
+    "What is the full hydrated PbH2 terrace-detachment free-energy curve versus fixed electron chemical potential?",
+    "Does PbH2 detach substantially more easily from low-coordination FCC/HCP Pb adatoms than from an ideal Pb(111) terrace?",
+    "What are the molecular-H2 product basins needed to compare Tafel HER against PbH2 formation/extraction?"
+  ],
+  "n_jobs": 31,
+  "jobs": [
+    {
+      "job_id": "X30",
+      "directory": "surfaces/Pb111/PbH2_extraction/explicit_water/detached/m0p11195",
+      "family": "PbH2_extraction_explicit_water",
+      "state": "detached_PbH2_plus_vacancy_plus_2H2O",
+      "target_mu_Ha": -0.11195,
+      "source_job_id": "X28"
+    },
+    {
+      "job_id": "X31",
+      "directory": "surfaces/Pb111/PbH2_extraction/explicit_water/detached/m0p1046",
+      "family": "PbH2_extraction_explicit_water",
+      "state": "detached_PbH2_plus_vacancy_plus_2H2O",
+      "target_mu_Ha": -0.1046,
+      "source_job_id": "X29"
+    },
+    {
+      "job_id": "X32",
+      "directory": "surfaces/Pb111/PbH2_extraction/explicit_water/detached/m0p0899",
+      "family": "PbH2_extraction_explicit_water",
+      "state": "detached_PbH2_plus_vacancy_plus_2H2O",
+      "target_mu_Ha": -0.0899,
+      "source_job_id": "X29"
+    },
+    {
+      "job_id": "X33",
+      "directory": "surfaces/Pb111/adatom_PbH2/fcc/explicit_water/precursor/m0p1193",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "fcc_adatom_PbH2_precursor_plus_2H2O",
+      "target_mu_Ha": -0.1193,
+      "source_job_id": "D02"
+    },
+    {
+      "job_id": "X34",
+      "directory": "surfaces/Pb111/adatom_PbH2/fcc/explicit_water/detached/m0p1193",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "fcc_adatom_detached_PbH2_plus_2H2O",
+      "target_mu_Ha": -0.1193,
+      "source_job_id": "D02"
+    },
+    {
+      "job_id": "X35",
+      "directory": "surfaces/Pb111/adatom_PbH2/fcc/explicit_water/precursor/m0p11195",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "fcc_adatom_PbH2_precursor_plus_2H2O",
+      "target_mu_Ha": -0.11195,
+      "source_job_id": "D02"
+    },
+    {
+      "job_id": "X36",
+      "directory": "surfaces/Pb111/adatom_PbH2/fcc/explicit_water/detached/m0p11195",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "fcc_adatom_detached_PbH2_plus_2H2O",
+      "target_mu_Ha": -0.11195,
+      "source_job_id": "D02"
+    },
+    {
+      "job_id": "X37",
+      "directory": "surfaces/Pb111/adatom_PbH2/fcc/explicit_water/precursor/m0p1046",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "fcc_adatom_PbH2_precursor_plus_2H2O",
+      "target_mu_Ha": -0.1046,
+      "source_job_id": "D02"
+    },
+    {
+      "job_id": "X38",
+      "directory": "surfaces/Pb111/adatom_PbH2/fcc/explicit_water/detached/m0p1046",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "fcc_adatom_detached_PbH2_plus_2H2O",
+      "target_mu_Ha": -0.1046,
+      "source_job_id": "D02"
+    },
+    {
+      "job_id": "X39",
+      "directory": "surfaces/Pb111/adatom_PbH2/fcc/explicit_water/precursor/m0p09725",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "fcc_adatom_PbH2_precursor_plus_2H2O",
+      "target_mu_Ha": -0.09725,
+      "source_job_id": "D02"
+    },
+    {
+      "job_id": "X40",
+      "directory": "surfaces/Pb111/adatom_PbH2/fcc/explicit_water/detached/m0p09725",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "fcc_adatom_detached_PbH2_plus_2H2O",
+      "target_mu_Ha": -0.09725,
+      "source_job_id": "D02"
+    },
+    {
+      "job_id": "X41",
+      "directory": "surfaces/Pb111/adatom_PbH2/fcc/explicit_water/precursor/m0p0899",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "fcc_adatom_PbH2_precursor_plus_2H2O",
+      "target_mu_Ha": -0.0899,
+      "source_job_id": "D02"
+    },
+    {
+      "job_id": "X42",
+      "directory": "surfaces/Pb111/adatom_PbH2/fcc/explicit_water/detached/m0p0899",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "fcc_adatom_detached_PbH2_plus_2H2O",
+      "target_mu_Ha": -0.0899,
+      "source_job_id": "D02"
+    },
+    {
+      "job_id": "X43",
+      "directory": "surfaces/Pb111/adatom_PbH2/hcp/explicit_water/precursor/m0p1193",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "hcp_adatom_PbH2_precursor_plus_2H2O",
+      "target_mu_Ha": -0.1193,
+      "source_job_id": "D03"
+    },
+    {
+      "job_id": "X44",
+      "directory": "surfaces/Pb111/adatom_PbH2/hcp/explicit_water/detached/m0p1193",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "hcp_adatom_detached_PbH2_plus_2H2O",
+      "target_mu_Ha": -0.1193,
+      "source_job_id": "D03"
+    },
+    {
+      "job_id": "X45",
+      "directory": "surfaces/Pb111/adatom_PbH2/hcp/explicit_water/precursor/m0p11195",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "hcp_adatom_PbH2_precursor_plus_2H2O",
+      "target_mu_Ha": -0.11195,
+      "source_job_id": "D03"
+    },
+    {
+      "job_id": "X46",
+      "directory": "surfaces/Pb111/adatom_PbH2/hcp/explicit_water/detached/m0p11195",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "hcp_adatom_detached_PbH2_plus_2H2O",
+      "target_mu_Ha": -0.11195,
+      "source_job_id": "D03"
+    },
+    {
+      "job_id": "X47",
+      "directory": "surfaces/Pb111/adatom_PbH2/hcp/explicit_water/precursor/m0p1046",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "hcp_adatom_PbH2_precursor_plus_2H2O",
+      "target_mu_Ha": -0.1046,
+      "source_job_id": "D03"
+    },
+    {
+      "job_id": "X48",
+      "directory": "surfaces/Pb111/adatom_PbH2/hcp/explicit_water/detached/m0p1046",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "hcp_adatom_detached_PbH2_plus_2H2O",
+      "target_mu_Ha": -0.1046,
+      "source_job_id": "D03"
+    },
+    {
+      "job_id": "X49",
+      "directory": "surfaces/Pb111/adatom_PbH2/hcp/explicit_water/precursor/m0p09725",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "hcp_adatom_PbH2_precursor_plus_2H2O",
+      "target_mu_Ha": -0.09725,
+      "source_job_id": "D03"
+    },
+    {
+      "job_id": "X50",
+      "directory": "surfaces/Pb111/adatom_PbH2/hcp/explicit_water/detached/m0p09725",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "hcp_adatom_detached_PbH2_plus_2H2O",
+      "target_mu_Ha": -0.09725,
+      "source_job_id": "D03"
+    },
+    {
+      "job_id": "X51",
+      "directory": "surfaces/Pb111/adatom_PbH2/hcp/explicit_water/precursor/m0p0899",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "hcp_adatom_PbH2_precursor_plus_2H2O",
+      "target_mu_Ha": -0.0899,
+      "source_job_id": "D03"
+    },
+    {
+      "job_id": "X52",
+      "directory": "surfaces/Pb111/adatom_PbH2/hcp/explicit_water/detached/m0p0899",
+      "family": "adatom_PbH2_explicit_water",
+      "state": "hcp_adatom_detached_PbH2_plus_2H2O",
+      "target_mu_Ha": -0.0899,
+      "source_job_id": "D03"
+    },
+    {
+      "job_id": "X53",
+      "directory": "surfaces/Pb111/HER/Tafel/H2_endpoint/m0p1193/z4p0",
+      "family": "fixed_mu_H2_endpoint",
+      "state": "H2_above_Pb111",
+      "target_mu_Ha": -0.1193,
+      "source_job_id": "M2H04"
+    },
+    {
+      "job_id": "X54",
+      "directory": "surfaces/Pb111/HER/Tafel/H2_endpoint/m0p1193/z6p0",
+      "family": "fixed_mu_H2_endpoint",
+      "state": "H2_above_Pb111",
+      "target_mu_Ha": -0.1193,
+      "source_job_id": "M2H04"
+    },
+    {
+      "job_id": "X55",
+      "directory": "surfaces/Pb111/HER/Tafel/H2_endpoint/m0p11195/z4p0",
+      "family": "fixed_mu_H2_endpoint",
+      "state": "H2_above_Pb111",
+      "target_mu_Ha": -0.11195,
+      "source_job_id": "X18"
+    },
+    {
+      "job_id": "X56",
+      "directory": "surfaces/Pb111/HER/Tafel/H2_endpoint/m0p11195/z6p0",
+      "family": "fixed_mu_H2_endpoint",
+      "state": "H2_above_Pb111",
+      "target_mu_Ha": -0.11195,
+      "source_job_id": "X18"
+    },
+    {
+      "job_id": "X57",
+      "directory": "surfaces/Pb111/HER/Tafel/H2_endpoint/m0p1046/z4p0",
+      "family": "fixed_mu_H2_endpoint",
+      "state": "H2_above_Pb111",
+      "target_mu_Ha": -0.1046,
+      "source_job_id": "M2H05"
+    },
+    {
+      "job_id": "X58",
+      "directory": "surfaces/Pb111/HER/Tafel/H2_endpoint/m0p1046/z6p0",
+      "family": "fixed_mu_H2_endpoint",
+      "state": "H2_above_Pb111",
+      "target_mu_Ha": -0.1046,
+      "source_job_id": "M2H05"
+    },
+    {
+      "job_id": "X59",
+      "directory": "surfaces/Pb111/HER/Tafel/H2_endpoint/m0p09725/z4p0",
+      "family": "fixed_mu_H2_endpoint",
+      "state": "H2_above_Pb111",
+      "target_mu_Ha": -0.09725,
+      "source_job_id": "X19"
+    },
+    {
+      "job_id": "X60",
+      "directory": "surfaces/Pb111/HER/Tafel/H2_endpoint/m0p09725/z6p0",
+      "family": "fixed_mu_H2_endpoint",
+      "state": "H2_above_Pb111",
+      "target_mu_Ha": -0.09725,
+      "source_job_id": "X19"
+    }
+  ]
+}

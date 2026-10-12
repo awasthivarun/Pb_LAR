@@ -1,0 +1,152 @@
+{
+  "wave": 11,
+  "name": "fixed-mu Pb111 defect thermodynamics",
+  "scientific_question": "How does the balanced energetic cost of creating a Pb vacancy-adatom Frenkel pair vary with electron chemical potential, and does FCC or HCP adatom formation become favored?",
+  "balanced_reactions": {
+    "fcc": "2 clean_Pb36 -> vacancy_Pb35 + fcc_adatom_Pb37",
+    "hcp": "2 clean_Pb36 -> vacancy_Pb35 + hcp_adatom_Pb37"
+  },
+  "analysis": {
+    "fcc": "DeltaG_Frenkel = G_vacancy + G_fcc_adatom - 2*G_clean",
+    "hcp": "DeltaG_Frenkel = G_vacancy + G_hcp_adatom - 2*G_clean"
+  },
+  "n_jobs": 17,
+  "jobs": [
+    {
+      "job_id": "X61",
+      "directory": "surfaces/Pb111/fixed_mu/clean/m0p11195",
+      "family": "fixed_mu_clean",
+      "state": "clean",
+      "target_mu_Ha": -0.11195,
+      "source_job_id": "G01"
+    },
+    {
+      "job_id": "X62",
+      "directory": "surfaces/Pb111/fixed_mu/clean/m0p09725",
+      "family": "fixed_mu_clean",
+      "state": "clean",
+      "target_mu_Ha": -0.09725,
+      "source_job_id": "G02"
+    },
+    {
+      "job_id": "X63",
+      "directory": "surfaces/Pb111/fixed_mu/defects/vacancy/m0p1193",
+      "family": "fixed_mu_defect",
+      "state": "vacancy",
+      "target_mu_Ha": -0.1193,
+      "source_job_id": "D01"
+    },
+    {
+      "job_id": "X64",
+      "directory": "surfaces/Pb111/fixed_mu/defects/vacancy/m0p11195",
+      "family": "fixed_mu_defect",
+      "state": "vacancy",
+      "target_mu_Ha": -0.11195,
+      "source_job_id": "D01"
+    },
+    {
+      "job_id": "X65",
+      "directory": "surfaces/Pb111/fixed_mu/defects/vacancy/m0p1046",
+      "family": "fixed_mu_defect",
+      "state": "vacancy",
+      "target_mu_Ha": -0.1046,
+      "source_job_id": "D01"
+    },
+    {
+      "job_id": "X66",
+      "directory": "surfaces/Pb111/fixed_mu/defects/vacancy/m0p09725",
+      "family": "fixed_mu_defect",
+      "state": "vacancy",
+      "target_mu_Ha": -0.09725,
+      "source_job_id": "D01"
+    },
+    {
+      "job_id": "X67",
+      "directory": "surfaces/Pb111/fixed_mu/defects/vacancy/m0p0899",
+      "family": "fixed_mu_defect",
+      "state": "vacancy",
+      "target_mu_Ha": -0.0899,
+      "source_job_id": "D01"
+    },
+    {
+      "job_id": "X68",
+      "directory": "surfaces/Pb111/fixed_mu/defects/adatom_fcc/m0p1193",
+      "family": "fixed_mu_defect",
+      "state": "adatom_fcc",
+      "target_mu_Ha": -0.1193,
+      "source_job_id": "D02"
+    },
+    {
+      "job_id": "X69",
+      "directory": "surfaces/Pb111/fixed_mu/defects/adatom_fcc/m0p11195",
+      "family": "fixed_mu_defect",
+      "state": "adatom_fcc",
+      "target_mu_Ha": -0.11195,
+      "source_job_id": "D02"
+    },
+    {
+      "job_id": "X70",
+      "directory": "surfaces/Pb111/fixed_mu/defects/adatom_fcc/m0p1046",
+      "family": "fixed_mu_defect",
+      "state": "adatom_fcc",
+      "target_mu_Ha": -0.1046,
+      "source_job_id": "D02"
+    },
+    {
+      "job_id": "X71",
+      "directory": "surfaces/Pb111/fixed_mu/defects/adatom_fcc/m0p09725",
+      "family": "fixed_mu_defect",
+      "state": "adatom_fcc",
+      "target_mu_Ha": -0.09725,
+      "source_job_id": "D02"
+    },
+    {
+      "job_id": "X72",
+      "directory": "surfaces/Pb111/fixed_mu/defects/adatom_fcc/m0p0899",
+      "family": "fixed_mu_defect",
+      "state": "adatom_fcc",
+      "target_mu_Ha": -0.0899,
+      "source_job_id": "D02"
+    },
+    {
+      "job_id": "X73",
+      "directory": "surfaces/Pb111/fixed_mu/defects/adatom_hcp/m0p1193",
+      "family": "fixed_mu_defect",
+      "state": "adatom_hcp",
+      "target_mu_Ha": -0.1193,
+      "source_job_id": "D03"
+    },
+    {
+      "job_id": "X74",
+      "directory": "surfaces/Pb111/fixed_mu/defects/adatom_hcp/m0p11195",
+      "family": "fixed_mu_defect",
+      "state": "adatom_hcp",
+      "target_mu_Ha": -0.11195,
+      "source_job_id": "D03"
+    },
+    {
+      "job_id": "X75",
+      "directory": "surfaces/Pb111/fixed_mu/defects/adatom_hcp/m0p1046",
+      "family": "fixed_mu_defect",
+      "state": "adatom_hcp",
+      "target_mu_Ha": -0.1046,
+      "source_job_id": "D03"
+    },
+    {
+      "job_id": "X76",
+      "directory": "surfaces/Pb111/fixed_mu/defects/adatom_hcp/m0p09725",
+      "family": "fixed_mu_defect",
+      "state": "adatom_hcp",
+      "target_mu_Ha": -0.09725,
+      "source_job_id": "D03"
+    },
+    {
+      "job_id": "X77",
+      "directory": "surfaces/Pb111/fixed_mu/defects/adatom_hcp/m0p0899",
+      "family": "fixed_mu_defect",
+      "state": "adatom_hcp",
+      "target_mu_Ha": -0.0899,
+      "source_job_id": "D03"
+    }
+  ]
+}

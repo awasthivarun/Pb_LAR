@@ -1,0 +1,99 @@
+{
+  "wave": 6,
+  "name": "surface 2H potential references and PbH2 extraction NEBs",
+  "manifest_role": "campaign_definition",
+  "scientific_questions": [
+    "Determine whether chemically valid surface two-H minima survive at target-mu = -0.11195 and -0.09725 Ha.",
+    "Resolve the neutral Pb(H)2 extraction pathway into surface, partially extracted, and detached states.",
+    "Calculate the initial non-climbing grand-canonical PbH2 extraction band at target-mu = -0.1193 Ha."
+  ],
+  "potential_mapping_note": "Approximate RHE potentials use the historical project calibration. target_mu_Ha is the authoritative calculation variable.",
+  "interpretation_note": "State labels for X17-X20 describe intended starting basins only. Final relaxed structures must be classified independently, and proton-well states must not be treated as physical references.",
+  "jobs": [
+    {
+      "job_id": "X17",
+      "type": "geometry_optimization",
+      "directory": "surfaces/Pb111/fixed_mu/H2_reference/separated/m0p11195",
+      "source_job_id": "M2H01",
+      "target_mu_Ha": -0.11195,
+      "approx_U_RHE_V_at_pH7": -1.2,
+      "initial_state": "surface_2H_separated",
+      "purpose": "Test whether the separated two-H surface basin remains a physical local minimum at target-mu = -0.11195 Ha."
+    },
+    {
+      "job_id": "X18",
+      "type": "geometry_optimization",
+      "directory": "surfaces/Pb111/fixed_mu/H2_reference/same_Pb/m0p11195",
+      "source_job_id": "M2H04",
+      "target_mu_Ha": -0.11195,
+      "approx_U_RHE_V_at_pH7": -1.2,
+      "initial_state": "surface_2H_same_Pb",
+      "purpose": "Test whether the same-Pb two-H surface basin remains a physical local minimum at target-mu = -0.11195 Ha."
+    },
+    {
+      "job_id": "X19",
+      "type": "geometry_optimization",
+      "directory": "surfaces/Pb111/fixed_mu/H2_reference/separated/m0p09725",
+      "source_job_id": "M2H05",
+      "target_mu_Ha": -0.09725,
+      "approx_U_RHE_V_at_pH7": -1.6,
+      "initial_state": "surface_2H_separated",
+      "purpose": "Continue a chemically valid separated two-H surface state to target-mu = -0.09725 Ha."
+    },
+    {
+      "job_id": "X20",
+      "type": "geometry_optimization",
+      "directory": "surfaces/Pb111/fixed_mu/H2_reference/same_Pb/m0p09725",
+      "source_job_id": "M2H04",
+      "target_mu_Ha": -0.09725,
+      "approx_U_RHE_V_at_pH7": -1.6,
+      "initial_state": "surface_2H_same_Pb",
+      "purpose": "Test whether the same-Pb two-H surface basin survives at target-mu = -0.09725 Ha."
+    },
+    {
+      "job_id": "N05",
+      "type": "NEB",
+      "family": "neutral_neb",
+      "directory": "kinetics/Pb111/neutral/PbH2_surface_to_partially_extracted",
+      "initial_job_id": "HH02",
+      "final_job_id": "X01",
+      "target_mu_Ha": null,
+      "approx_U_RHE_V_at_pH7": null,
+      "endpoint_energy_key": "F",
+      "interpolation": "ASE IDPP",
+      "mic": true,
+      "stage": "initial_band_relaxation",
+      "purpose": "Neutral first-stage NEB from same-Pb surface Pb(H)2 to the partially extracted Pb(H)2 minimum."
+    },
+    {
+      "job_id": "N06",
+      "type": "NEB",
+      "family": "neutral_neb",
+      "directory": "kinetics/Pb111/neutral/PbH2_partially_extracted_to_detached",
+      "initial_job_id": "X01",
+      "final_job_id": "X03",
+      "target_mu_Ha": null,
+      "approx_U_RHE_V_at_pH7": null,
+      "endpoint_energy_key": "F",
+      "interpolation": "ASE IDPP",
+      "mic": true,
+      "stage": "initial_band_relaxation",
+      "purpose": "Neutral first-stage NEB from partially extracted Pb(H)2 to detached PbH2 above a Pb vacancy."
+    },
+    {
+      "job_id": "N07",
+      "type": "NEB",
+      "family": "fixed_mu_neb",
+      "directory": "kinetics/Pb111/fixed_mu/m0p1193/PbH2_strongly_lifted_to_detached",
+      "initial_job_id": "M2H07",
+      "final_job_id": "X16",
+      "target_mu_Ha": -0.1193,
+      "approx_U_RHE_V_at_pH7": -1.0,
+      "endpoint_energy_key": "G",
+      "interpolation": "ASE IDPP",
+      "mic": true,
+      "stage": "initial_band_relaxation",
+      "purpose": "Fixed-mu first-stage NEB from strongly lifted surface Pb(H)2 to asymptotically detached PbH2 plus a Pb vacancy."
+    }
+  ]
+}
