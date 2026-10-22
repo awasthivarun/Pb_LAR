@@ -212,6 +212,8 @@ def get_calc_type(folder, metadata):
             return kind
     if metadata.get('n_intermediate_images') is not None or metadata.get('intermediate_images') is not None:
         return 'neb'
+    if metadata.get('family') == 'bulk_reference':
+        return 'bulk_reference'
     return 'unknown'
 
 
@@ -325,6 +327,11 @@ def scan(ledger, root, source, use_sacct):
         manifest = manifest_index.get(relative, [])
         jobid = meta.get('job_id') or (manifest[0]['job_id'] if manifest else None)
         kind = get_calc_type(folder, meta)
+        # A scan without --sacct must not discard Slurm history obtained by an earlier scan.
+        results = extract_results(folder, kind, meta)
+        prior_scheduler = old.get('results', {}).get('scheduler', {})
+        if prior_scheduler:
+            results['scheduler'] = dict(prior_scheduler)
         record = dict(old)
         record.update({
             'file_sha256': file_hashes(folder),
@@ -335,7 +342,7 @@ def scan(ledger, root, source, use_sacct):
             'setup': meta,
             'setup_metadata_path': str(meta_file.relative_to(root)) if meta_file.is_file() else None,
             'manifests': manifest,
-            'results': extract_results(folder, kind, meta),
+            'results': results,
         })
         record.setdefault('scientific_review', {'status': 'not_reviewed', 'priority': 'unassigned', 'history': []})
         ledger['jobs'][relative] = record
@@ -349,7 +356,8 @@ def scan(ledger, root, source, use_sacct):
             ids = set(item.get('results', {}).get('slurm_ids', []))
             ids.update(str(event['slurm_id']) for event in item.get('execution_events', [])
                        if event.get('slurm_id'))
-            item['results']['scheduler'] = {id_: statuses[id_] for id_ in ids if id_ in statuses}
+            scheduler = item['results'].setdefault('scheduler', {})
+            scheduler.update({id_: statuses[id_] for id_ in ids if id_ in statuses})
     # Preserve historical entries whose directories disappeared; mark missing instead of deleting them.
     for path, item in ledger['jobs'].items():
         item['directory_currently_present'] = (root / path).is_dir()
@@ -431,13 +439,14 @@ def make_report(ledger):
     ]
     for family in sorted(sections):
         lines.extend([f'## {family}', '',
-                      '| ID | Type | Scientific status | Priority | Directory |',
-                      '|---|---|---|---|---|'])
+                      '| ID | Type | Scientific status | Priority | Setup purpose | Directory |',
+                      '|---|---|---|---|---|---|'])
         for job in sorted(sections[family], key=lambda j: (j.get('job_id') or 'ZZZ', j['directory'])):
             r = job['scientific_review']
+            purpose = job['setup'].get('purpose') or job['setup'].get('description') or '(not recorded)'
             lines.append('| ' + ' | '.join(map(md_escape, (
                 job.get('job_id') or '(no ID)', job.get('calculation_type'), r.get('status'),
-                r.get('priority'), '`' + job['directory'] + '`'))) + ' |')
+                r.get('priority'), purpose, '`' + job['directory'] + '`'))) + ' |')
         lines.append('')
     lines.extend(['## Scientific notes', ''])
     for job in sorted(jobs, key=lambda j: (j.get('job_id') or 'ZZZ', j['directory'])):
@@ -456,7 +465,8 @@ def make_report(ledger):
             lines.extend([f'**Caveats:** {last["limitations"]}', ''])
         results = job.get('results', {})
         if 'sampled_forward_barrier_eV' in results:
-            lines.extend([f'**Extracted sampled maximum:** {results["sampled_forward_barrier_eV"]:+.6f} eV; '
+            caution = ' (INVALID PATH; NOT A PHYSICAL BARRIER)' if r.get('status') == 'invalid' else ''
+            lines.extend([f'**Extracted sampled maximum{caution}:** {results["sampled_forward_barrier_eV"]:+.6f} eV; '
                           f'**endpoint difference:** {results.get("endpoint_delta_omega_eV", results.get("endpoint_delta_f_eV")):+.6f} eV '
                           f'({results["energy_key"]}).', ''])
     if ledger.get('unmatched_retrospective_notes'):

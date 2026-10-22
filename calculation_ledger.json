@@ -9,7 +9,7 @@
       },
       "job_id": "B01",
       "directory": "bulk/Pb_fcc",
-      "calculation_type": "unknown",
+      "calculation_type": "bulk_reference",
       "family": "bulk_reference",
       "setup": {
         "job_id": "B01",
@@ -834,9 +834,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "supporting",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Earlier fixed-potential strongly lifted surface Pb(H)2 to detached PbH2 pathway; sampled maximum +1.210523 eV, endpoint difference +1.207361 eV, fmax 0.071037 eV/A.",
+            "limitations": "Continuum-only earlier model. Do not substitute for validated explicit-water terrace detachment; image 08 slightly exceeds the endpoint."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -2260,9 +2267,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "supporting",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Early continuum-only fixed-potential migration of one adsorbed H from FCC-like to lifted on-top Pb-H configuration. Sampled maximum +0.149078 eV and endpoint difference -0.052613 eV; converged nonclimbing NEB at 0.061821 eV/A.",
+            "limitations": "Approximate pathway screen only; inspect actual geometry before assigning a single-H mechanistic label or rate constant."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -2514,9 +2528,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "supporting",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Neutral partially extracted to detached PbH2 screening NEB: sampled monotonically uphill, +0.819229 eV endpoint energy difference, fmax 0.076599 eV/A.",
+            "limitations": "Continuum-only neutral model; distinguish this segment from the full surface-to-detached transformation."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -2638,9 +2659,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "supporting",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Neutral same-Pb surface Pb(H)2 to partially extracted Pb(H)2 screening NEB. Monotonically uphill within sampled band; +0.432827 eV endpoint energy difference, fmax 0.069064 eV/A.",
+            "limitations": "Continuum-only neutral model. Endpoint value is not an independently identified saddle-point barrier."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -2750,9 +2778,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "low",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Neutral H transfer from surface FCC environment to deep subsurface/Pb-lifted structure: sampled +0.290299 eV maximum and +0.048945 eV endpoint difference; NEB reached 0.070113 eV/A.",
+            "limitations": "Neutral electronic ensemble; not a fixed-potential Volmer step. Transition state and final geometry not independently verified."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -5053,9 +5088,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "diagnostic",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Early fixed-potential PbH2 extraction endpoint trial (4.0 A lifting) timed out with residual force 0.217346 eV/A.",
+            "limitations": "Not an optimized minimum; other more converged extraction states should be preferred."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -6068,9 +6110,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "supporting",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "FCC-adatom hydrated detached PbH2 endpoint at -1.8 V RHE; energy pairing with X41 gives +0.946463 eV local extraction cost.",
+            "limitations": "Endpoint thermodynamics do not establish an adatom creation or dissolution rate."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -6453,9 +6502,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "supporting",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "FCC-adatom hydrated Pb(H)2 precursor at -1.8 V RHE; matched detached structure X42 gives +0.946463 eV local detachment grand potential.",
+            "limitations": "NEB connecting X41 to X42 exhibited an abrupt dielectric/charge change. Check the precursor geometry and defect thermodynamic cycle."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -7547,9 +7603,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "core",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Hydrated HCP-adatom detached PbH2 endpoint at -1.0 V RHE, paired with optimized precursor X86; local detachment grand potential +0.880822 eV.",
+            "limitations": "Pre-existing adatom. Does not include the energy of creating an adatom/vacancy defect."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -7636,9 +7699,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "diagnostic",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "HCP-adatom PbH2 precursor trial at -1.8 V RHE timed out with residual force 0.724719 eV/A.",
+            "limitations": "Not converged; chemical validity unverified. Do not use for thermodynamic pair calculations."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -7992,9 +8062,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "superseded",
+        "priority": "supporting",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Original hydrated HCP-adatom PbH2 precursor at -1.0 V RHE; its paired X44 detachment cost is +0.552896 eV, but a later independent relaxation from the NEB found lower-energy precursor X86.",
+            "limitations": "Use X86 rather than X43 for the revised HCP-adatom detachment reaction; X43 remains a distinct local structure."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -8182,9 +8259,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "diagnostic",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Follow-up HCP-adatom precursor relaxation at -1.8 V RHE timed out with residual force 2.896891 eV/A.",
+            "limitations": "Still unconverged; not a usable equilibrium precursor. Distinguish this from other successful precursor continuations."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -9034,9 +9118,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "diagnostic",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Earlier dry/fixed-potential PbH2-like surface GO at -1.4 V RHE timed out with maximum force 0.057769 eV/A.",
+            "limitations": "Not converged to the 0.04 eV/A GO criterion; not independently reviewed structurally."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -9770,9 +9861,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "diagnostic",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Dry/fixed-potential separated two-H reference at -1.2 V RHE timed out with maximum force 0.079483 eV/A.",
+            "limitations": "Not converged to 0.04 eV/A and should not be treated as an optimized endpoint."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -11944,9 +12042,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "supporting",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Hydrated hydride-oriented terrace precursor at -1.8 V RHE; matched to detached X32, endpoint detachment grand potential +1.554947 eV.",
+            "limitations": "Matched endpoint thermodynamics remain useful even though hydrated terrace extraction NEB at this potential was invalid."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -12090,9 +12195,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "supporting",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Hydrated hydride-oriented terrace precursor at -1.6 V RHE; matched to detached X29, endpoint detachment grand potential +1.432054 eV.",
+            "limitations": "Matched endpoint thermodynamics, not a kinetic activation barrier."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -12200,9 +12312,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "supporting",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Hydrated hydride-oriented terrace precursor at -1.4 V RHE; matched to detached X31, endpoint detachment grand potential +1.356592 eV.",
+            "limitations": "Matched endpoint thermodynamics, not a kinetic activation barrier."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -12310,9 +12429,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "supporting",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Hydrated hydride-oriented terrace precursor at -1.2 V RHE; matched to detached X30, endpoint detachment grand potential +1.318411 eV.",
+            "limitations": "Matched endpoint thermodynamics, not a kinetic activation barrier."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -12456,9 +12582,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "core",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Hydrated hydride-oriented terrace precursor at -1.0 V RHE. Converged fmax 0.030990 eV/A; matched to detached product X28 for +1.309621 eV detachment grand-potential difference.",
+            "limitations": "Retain matched stoichiometry/electron chemical potential; precursor structure and explicit water integrity should be checked again in complete publication audit."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -12602,9 +12735,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "diagnostic",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Proton-oriented explicit-water terrace trial at -1.6 V RHE timed out with extreme residual force 13.416493 eV/A.",
+            "limitations": "Numerically unreliable; do not interpret this unconverged geometry or energy as a physical minimum."
+          }
+        ]
       },
       "directory_currently_present": true
     },
@@ -12748,9 +12888,16 @@
         }
       },
       "scientific_review": {
-        "status": "not_reviewed",
-        "priority": "unassigned",
-        "history": []
+        "status": "provisional",
+        "priority": "diagnostic",
+        "history": [
+          {
+            "recorded_utc": "2026-10-22T17:44:53+00:00",
+            "source": "ledger_file_audit_2026-10-22",
+            "assessment": "Proton-oriented explicit-water terrace trial at -1.0 V RHE timed out, with final reported optimizer force 0.208222 eV/A.",
+            "limitations": "Not converged; do not extract thermodynamics from this output without additional numerical/structural review."
+          }
+        ]
       },
       "directory_currently_present": true
     }
