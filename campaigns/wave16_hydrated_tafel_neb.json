@@ -1,0 +1,11 @@
+{
+  "wave": 16,
+  "name": "hydrated Tafel HER NEB",
+  "jobs": [
+    {
+      "job_id": "N17",
+      "directory": "kinetics/Pb111/fixed_mu/m0p1193/Tafel_surface2H_to_H2_explicit_water"
+    }
+  ],
+  "initial_geometry_warnings": []
+}

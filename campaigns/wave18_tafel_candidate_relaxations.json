@@ -1,0 +1,16 @@
+{
+  "wave": 18,
+  "name": "Hydrated Tafel reactant and product candidate relaxations",
+  "jobs": [
+    {
+      "job_id": "X90",
+      "directory": "surfaces/Pb111/HER/Tafel/explicit_water/m0p1193/relax_2H_from_N18_image05",
+      "source_image": 5
+    },
+    {
+      "job_id": "X91",
+      "directory": "surfaces/Pb111/HER/Tafel/explicit_water/m0p1193/relax_H2_from_N18_image14",
+      "source_image": 14
+    }
+  ]
+}

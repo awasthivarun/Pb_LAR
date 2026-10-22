@@ -1,0 +1,11 @@
+{
+  "wave": 15,
+  "name": "hydrated Tafel intermediate stress test",
+  "jobs": [
+    {
+      "job_id": "X89",
+      "directory": "surfaces/Pb111/HER/Tafel/explicit_water/m0p1193/hydrated_N08_image05_sp"
+    }
+  ],
+  "status": "prepared_not_submitted"
+}

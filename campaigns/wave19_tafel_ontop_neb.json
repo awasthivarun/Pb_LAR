@@ -1,0 +1,12 @@
+{
+  "wave": 19,
+  "name": "Tafel NEB with optimized on-top reactant and vertical H2 product",
+  "jobs": [
+    {
+      "job_id": "N19",
+      "directory": "kinetics/Pb111/fixed_mu/m0p1193/Tafel_ontop2H_to_H2_explicit_water",
+      "nimages": 8,
+      "nodes": 2
+    }
+  ]
+}

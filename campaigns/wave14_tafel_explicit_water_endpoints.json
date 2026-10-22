@@ -1,0 +1,28 @@
+{
+  "wave": 14,
+  "name": "hydrated Tafel HER endpoint screening",
+  "scientific_question": "Can two explicit waters stabilize the physical surface-2H and molecular-H2 endpoints at fixed electron chemical potential before attempting a hydrated Tafel NEB?",
+  "n_jobs": 2,
+  "jobs": [
+    {
+      "job_id": "X87",
+      "directory": "surfaces/Pb111/HER/Tafel/explicit_water/m0p1193/hydrated_surface_2H",
+      "source_job_id": "M2H04",
+      "state": "hydrated_surface_2H",
+      "target_mu_Ha": -0.1193
+    },
+    {
+      "job_id": "X88",
+      "directory": "surfaces/Pb111/HER/Tafel/explicit_water/m0p1193/hydrated_H2_product",
+      "source_job_id": "X53",
+      "state": "hydrated_H2_product",
+      "target_mu_Ha": -0.1193
+    }
+  ],
+  "notes": [
+    "Water positions are initial trial configurations, not equilibrated solvent structures.",
+    "Both endpoint jobs use identical starting water positions and atom correspondence.",
+    "Final structures must be checked for intact H2O, surface H or H2, and proton wells.",
+    "Scheduler operations are performed through CLI, not this notebook."
+  ]
+}

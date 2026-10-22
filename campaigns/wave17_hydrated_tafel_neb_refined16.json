@@ -1,0 +1,12 @@
+{
+  "wave": 17,
+  "name": "N18 refined hydrated Tafel NEB",
+  "jobs": [
+    {
+      "job_id": "N18",
+      "directory": "kinetics/Pb111/fixed_mu/m0p1193/Tafel_surface2H_to_H2_explicit_water_refined16",
+      "intermediate_images": 16,
+      "gpu_nodes": 4
+    }
+  ]
+}
