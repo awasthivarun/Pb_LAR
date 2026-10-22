@@ -437,6 +437,25 @@ def make_report(ledger):
         f'Jobs indexed: **{len(jobs)}**; job records awaiting scientific review: '
         f'**{sum(j["scientific_review"]["status"] == "not_reviewed" for j in jobs)}**.', ''
     ]
+    statuses = Counter(j['scientific_review']['status'] for j in jobs)
+    lines.extend([
+        '**Scientific review statuses:** ' + ', '.join(
+            f'{name} {statuses.get(name, 0)}'
+            for name in ('validated', 'provisional', 'invalid', 'superseded', 'not_reviewed')) + '.',
+        '',
+    ])
+    scope = ledger.get('audit_scope', {}).get('description')
+    if scope:
+        lines.extend(['**Review scope:** ' + scope, ''])
+    overview = ledger.get('scientific_overview', [])
+    if overview:
+        lines.extend(['## Project-wide scientific synthesis', ''])
+        for topic in overview:
+            lines.extend([
+                f'**{topic["title"]}** (jobs: {", ".join(topic.get("evidence_jobs", []))})', '',
+                topic['finding'], '',
+                f'**Limitations:** {topic["limitations"]}', '',
+            ])
     for family in sorted(sections):
         lines.extend([f'## {family}', '',
                       '| ID | Type | Scientific status | Priority | Setup purpose | Directory |',
