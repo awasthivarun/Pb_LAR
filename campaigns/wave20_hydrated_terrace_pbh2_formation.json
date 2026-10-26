@@ -1,0 +1,15 @@
+{
+  "wave": 20,
+  "name": "Hydrated terrace Pb(H)2 formation: matched-water precursor",
+  "scientific_question": "Does the X21-like Pb(H)2 local motif remain stable when placed in the X90 water environment?",
+  "jobs": [
+    {
+      "job_id": "X92",
+      "directory": "surfaces/Pb111/PbH2_formation/explicit_water/m0p1193/relax_X21_hydride_with_X90_water",
+      "purpose": "Test whether a terrace Pb(H)2-like precursor is a local minimum in the hydration environment of the independently optimized on-top two-H reactant X90.",
+      "source_job_id": "X90",
+      "geometry_donor_job_id": "X21",
+      "target_mu_Ha": -0.1193
+    }
+  ]
+}

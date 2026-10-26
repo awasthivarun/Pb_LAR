@@ -4,9 +4,9 @@ Generated from `calculation_ledger.json`. Edit reviews with `scripts/calculation
 Raw DFT data and original `metadata.json` files remain in the separate Pb_LAR calculation tree.
 **A `COMPLETED` Slurm state is not equivalent to geometry/NEB convergence or scientific validation.**
 
-Jobs indexed: **152**; job records awaiting scientific review: **0**.
+Jobs indexed: **153**; job records awaiting scientific review: **0**.
 
-**Scientific review statuses:** validated 11, provisional 126, invalid 5, superseded 10, not_reviewed 0.
+**Scientific review statuses:** validated 11, provisional 127, invalid 5, superseded 10, not_reviewed 0.
 
 **Review scope:** All 152 jobs have a written, evidence-limited assessment. This is a metadata/energy/scheduler audit and retrospective discussion reconciliation, not a final independent structural or electronic-state validation.
 
@@ -94,6 +94,12 @@ Earlier continuum-only NEBs screened separate-H to same-Pb rearrangement and ini
 | X30 | go | validated | supporting | Continue the physical hydrated detached PbH2 branch to complete the fixed-mu detachment curve. | `surfaces/Pb111/PbH2_extraction/explicit_water/detached/m0p11195` |
 | X31 | go | validated | supporting | Continue the physical hydrated detached PbH2 branch to complete the fixed-mu detachment curve. | `surfaces/Pb111/PbH2_extraction/explicit_water/detached/m0p1046` |
 | X32 | go | validated | supporting | Continue the physical hydrated detached PbH2 branch to complete the fixed-mu detachment curve. | `surfaces/Pb111/PbH2_extraction/explicit_water/detached/m0p0899` |
+
+## PbH2_formation_explicit_water
+
+| ID | Type | Scientific status | Priority | Setup purpose | Directory |
+|---|---|---|---|---|---|
+| X92 | go | provisional | core | Test whether a terrace Pb(H)2-like precursor is a local minimum in the hydration environment of the independently optimized on-top two-H reactant X90. | `surfaces/Pb111/PbH2_formation/explicit_water/m0p1193/relax_X21_hydride_with_X90_water` |
 
 ## PbH2_potential_sweep
 
@@ -1861,3 +1867,13 @@ Earlier continuum-only NEBs screened separate-H to same-Pb rearrangement and ini
 **Assessment:** Independent relaxation of nearly vertical H2 product: initial maximum force already 0.028671 eV/A; about 0.060 eV lower than original H2 product. Final G should be read from its own Ecomponents.
 
 **Caveats:** Retrospective from discussion; verify raw files before publication.
+
+### X92
+
+**Location:** `surfaces/Pb111/PbH2_formation/explicit_water/m0p1193/relax_X21_hydride_with_X90_water`. **Priority:** core. **Review state:** provisional.
+
+**Setup intent:** Test whether a terrace Pb(H)2-like precursor is a local minimum in the hydration environment of the independently optimized on-top two-H reactant X90.
+
+**Assessment:** Converged hydrated Pb(H)2-like precursor at mu=-0.11930 Ha. Final fmax=0.036798 eV/A; Pb32-H38=1.987 A, Pb32-H39=2.046 A, H-H=2.642 A. G=-2168.788186367622 Ha. DeltaOmega vs X90=+0.139528 eV; 0.165826 eV below X21. Both waters intact; water oxygen displacements vs X90 are 0.342 and 0.315 A.
+
+**Caveats:** Locally relaxed candidate minimum, not a vibrationally verified minimum. Formation barrier unknown. Solvation and electronic continuity along the reaction path remain to be checked.

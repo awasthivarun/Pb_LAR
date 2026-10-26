@@ -34,7 +34,8 @@
         "energy_key": "F",
         "F_Ha": -243.95110209718462,
         "optimizer": null,
-        "final_geometry_present": true
+        "final_geometry_present": true,
+        "scheduler": {}
       },
       "scientific_review": {
         "status": "provisional",
@@ -13747,6 +13748,149 @@
         ]
       },
       "directory_currently_present": true
+    },
+    "surfaces/Pb111/PbH2_formation/explicit_water/m0p1193/relax_X21_hydride_with_X90_water": {
+      "file_sha256": {
+        "go.py": "c1e87926556b571d9e6ec95397e90fccf5c9e93c0a7b58d32b813c5a43f59853",
+        "submit.sh": "8c0d018761e5d104707bab5bd31bf989131104ac0d204736a7062786676c3a54",
+        "POSCAR": "905a3ea6e4691e8024634a50c823899e73eefe293e9aaa0bcbaeec5b8bbeb06d"
+      },
+      "job_id": "X92",
+      "directory": "surfaces/Pb111/PbH2_formation/explicit_water/m0p1193/relax_X21_hydride_with_X90_water",
+      "calculation_type": "go",
+      "family": "PbH2_formation_explicit_water",
+      "setup": {
+        "job_id": "X92",
+        "wave": 20,
+        "family": "PbH2_formation_explicit_water",
+        "state": "surface_bound_PbH2_like",
+        "state_label_scope": "initial_intent",
+        "purpose": "Test whether a terrace Pb(H)2-like precursor is a local minimum in the hydration environment of the independently optimized on-top two-H reactant X90.",
+        "hypothesis": "The same-Pb two-H coordination and Pb32 lifting persist after relaxation without adopting the specially hydride-oriented waters from X21.",
+        "source_job_id": "X90",
+        "source_path": "surfaces/Pb111/HER/Tafel/explicit_water/m0p1193/relax_2H_from_N18_image05",
+        "geometry_donor_job_id": "X21",
+        "geometry_donor_path": "surfaces/Pb111/proton_well_rescue/hydride_oriented/m0p1193",
+        "transplanted_zero_based_indices": {
+          "Pb": [
+            32
+          ],
+          "reacting_H": [
+            38,
+            39
+          ]
+        },
+        "unchanged_from_X90": "All other Pb atoms and both complete water molecules.",
+        "atom_order_zero_based": {
+          "Pb": [
+            0,
+            35
+          ],
+          "O": [
+            36,
+            37
+          ],
+          "reacting_H": [
+            38,
+            39
+          ],
+          "water_H": [
+            40,
+            43
+          ]
+        },
+        "target_mu_Ha": -0.1193,
+        "approx_U_RHE_V_at_pH7": -1.0,
+        "explicit_water_count": 2,
+        "water_configuration": "X90_relaxed",
+        "go_template_source": "surfaces/Pb111/HER/Tafel/explicit_water/m0p1193/relax_2H_from_N18_image05/go.py",
+        "submit_template_source": "surfaces/Pb111/HER/Tafel/explicit_water/m0p1193/relax_2H_from_N18_image05/submit.sh",
+        "initial_geometry_metrics": {
+          "Pb32_H38_A": 1.9916134013106632,
+          "Pb32_H39_A": 1.9916134013106628,
+          "H38_H39_A": 2.599617369588409,
+          "minimum_water_H_reacting_H_A": 1.5559409456587905,
+          "minimum_water_O_reacting_H_A": 2.413551914076685,
+          "minimum_water_O_Pb_A": 3.722515615106644,
+          "minimum_reacting_H_other_Pb_A": 3.504293407563189,
+          "water_OH_bond_A": [
+            1.0157735812123725,
+            0.9883983752420575,
+            1.0120811511257128,
+            0.9883368566013442
+          ]
+        },
+        "comparison_jobs": [
+          "X90",
+          "X21",
+          "N19",
+          "N14"
+        ],
+        "status": "prepared_not_submitted"
+      },
+      "setup_metadata_path": "surfaces/Pb111/PbH2_formation/explicit_water/m0p1193/relax_X21_hydride_with_X90_water/metadata.json",
+      "manifests": [
+        {
+          "job_id": "X92",
+          "manifest": "campaigns/wave20_hydrated_terrace_pbh2_formation.json"
+        }
+      ],
+      "results": {
+        "slurm_ids": [
+          "60124796",
+          "60232475"
+        ],
+        "energy_key": "G",
+        "G_Ha": -2168.788186367622,
+        "F_Ha": -2231.307018273259,
+        "muN_Ha": -62.51883190563679,
+        "A_diel_Ha": -0.6900335450035346,
+        "optimizer": {
+          "step": 8,
+          "ase_energy_eV": -59015.732544,
+          "fmax_eV_A": 0.036798
+        },
+        "final_geometry_present": true,
+        "scheduler": {
+          "60124796": {
+            "state": "TIMEOUT",
+            "exit_code": "0:0",
+            "elapsed": "04:00:24"
+          },
+          "60232475": {
+            "state": "COMPLETED",
+            "exit_code": "0:0",
+            "elapsed": "00:24:39"
+          }
+        }
+      },
+      "scientific_review": {
+        "status": "provisional",
+        "priority": "core",
+        "history": [
+          {
+            "recorded_utc": "2026-10-26T01:02:09+00:00",
+            "source": "user_review",
+            "assessment": "Converged hydrated Pb(H)2-like precursor at mu=-0.11930 Ha. Final fmax=0.036798 eV/A; Pb32-H38=1.987 A, Pb32-H39=2.046 A, H-H=2.642 A. G=-2168.788186367622 Ha. DeltaOmega vs X90=+0.139528 eV; 0.165826 eV below X21. Both waters intact; water oxygen displacements vs X90 are 0.342 and 0.315 A.",
+            "limitations": "Locally relaxed candidate minimum, not a vibrationally verified minimum. Formation barrier unknown. Solvation and electronic continuity along the reaction path remain to be checked."
+          }
+        ]
+      },
+      "directory_currently_present": true,
+      "execution_events": [
+        {
+          "event": "submitted",
+          "slurm_id": "60124796",
+          "recorded_utc": "2026-10-22T19:45:25+00:00",
+          "note": ""
+        },
+        {
+          "event": "submitted",
+          "slurm_id": "60232475",
+          "recorded_utc": "2026-10-25T00:38:12+00:00",
+          "note": ""
+        }
+      ]
     }
   },
   "unmatched_retrospective_notes": {},
